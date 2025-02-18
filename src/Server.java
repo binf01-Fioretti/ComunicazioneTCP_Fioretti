@@ -23,5 +23,14 @@ public class Server {
         }
         return clientSocket;
     }
+    public void chiudi()  {
+        if(clientSocket!=null){
+            try {
+                clientSocket.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
 
+    }
 }
